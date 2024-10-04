@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useState } from 'react';
+import logo from "../assets/images/aarambhlogo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,14 +12,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <div className="text-2xl font-bold">Aarambh</div>
+    <nav className="bg-transparent z-10 fixed w-screen top-1 text-white p-4 shadow-md">
+      <div className="container w-full flex md:justify-items-center justify-between md:items-center">
+        <div className="justify-self-start w-16 md:w-24">
+          <img src={logo} className='w-full' alt="" />
         </div>
 
         {/* Menu icon for mobile */}
-        <div className="md:hidden">
+        <div className="md:hidden fixed right-10 m-1">
           <button onClick={toggleMenu} className="focus:outline-none">
             <svg
               className="w-6 h-6"
@@ -37,25 +38,26 @@ const Navbar = () => {
         </div>
 
         {/* Nav links */}
-        <div className={`md:flex md:items-center ${isOpen ? "block" : "hidden"} md:block`}>
-          <ul className="flex flex-col md:flex-row md:space-x-6">
+        <div className={`md:flex md:items-center ${isOpen ? "block" : "hidden"}  w-full items-start text-center`}>
+          <ul className="flex flex-col mr-[15%] md:mr-0 gap-6 md:gap-0 justify-evenly w-full md:flex-row md:space-x-6">
             <li>
-              <a href="#" className="hover:text-green-500">About us</a>
+              <a href="#" className="hover:text-green-500 text-2xl">About us</a>
             </li>
             <li>
-              <a href="#" className="hover:text-green-500">Resources</a>
+              <a href="#" className="hover:text-green-500 text-2xl">Resources</a>
             </li>
             <li>
-              <a href="#" className="hover:text-green-500">Events</a>
+              <a href="#" className="hover:text-green-500 text-2xl">Events</a>
             </li>
             <li>
-              <a href="#" className="hover:text-green-500">Contact us</a>
+              <a href="#" className="hover:text-green-500 text-2xl">Contact us</a>
             </li>
             <li>
-              <a href="#" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Join us</a>
+              <a href="#" className="border-white border-2 rounded-2xl text-white text-2xl px-4 rounded hover:bg-green-600">Join us</a>
             </li>
           </ul>
         </div>
+        
       </div>
     </nav>
   );
