@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       fontFamily:{
         Orbitron:['Orbitron'],
+        Inter:['Inter','sans'],
+        Exo:'Exo',
       }
     },
   },

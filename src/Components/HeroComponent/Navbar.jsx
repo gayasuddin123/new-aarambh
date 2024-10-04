@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useState } from 'react';
-import logo from "../assets/images/aarambhlogo.png"
+import logo from "../../assets/images/aarambhlogo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +12,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-transparent z-10 fixed w-screen top-1 text-white p-4 shadow-md">
-      <div className="container w-full flex md:justify-items-center justify-between md:items-center">
-        <div className="justify-self-start w-16 md:w-24">
+    <nav className="bg-transparent z-10 fixed w-full top-1 text-white p-4 shadow-md">
+      <div className=" w-sreen flex md:justify-items-center justify-between md:items-center">
+        <div className="justify-self-start w-16 mx-3 md:w-24">
           <img src={logo} className='w-full' alt="" />
         </div>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
 
         {/* Nav links */}
-        <div className={`md:flex md:items-center ${isOpen ? "block" : "hidden"}  w-full items-start text-center`}>
+        <div className={`md:flex md:items-center font-Inter ${isOpen ? "block" : "hidden"}  w-full items-start text-center`}>
           <ul className="flex flex-col mr-[15%] md:mr-0 gap-6 md:gap-0 justify-evenly w-full md:flex-row md:space-x-6">
             <li>
               <a href="#" className="hover:text-green-500 text-2xl">About us</a>
